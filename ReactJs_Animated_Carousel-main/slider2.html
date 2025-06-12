@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider Website</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="carousel">
+        <div class="item active">
+            <div class="bg"></div>
+            <div class="info-box">
+                <div class="info-slider">
+                    <div class="info-item" style="--i:0;">
+                        <h2>Stormrunner</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, laborum deleniti. Distinctio nostrum quis, id excepturi officia nisi? Debitis quo voluptas officia nobis eius dolorum vel soluta ea veritatis molestiae.</p>
+                        <a href="#" class="btn">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-box">
+                <div class="img-slider">
+                    <div class="img-item" style="--i:0;">
+                        <img src="../img/hero/img7.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="bg"></div>
+            <div class="info-box">
+                <div class="info-slider">
+                    <div class="info-item" style="--i:1;">
+                        <h2>Dropsight</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, laborum deleniti. Distinctio nostrum quis, id excepturi officia nisi? Debitis quo voluptas officia nobis eius dolorum vel soluta ea veritatis molestiae.</p>
+                        <a href="#" class="btn">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-box">
+                <div class="img-slider">
+                    <div class="img-item" style="--i:1;">
+                        <img src="https://i.postimg.cc/RZ3GHyDT/img2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="bg"></div>
+            <div class="info-box">
+                <div class="info-slider">
+                    <div class="info-item" style="--i:2;">
+                        <h2>Riot</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, laborum deleniti. Distinctio nostrum quis, id excepturi officia nisi? Debitis quo voluptas officia nobis eius dolorum vel soluta ea veritatis molestiae.</p>
+                        <a href="#" class="btn">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-box">
+                <div class="img-slider">
+                    <div class="img-item" style="--i:2;">
+                        <img src="https://i.postimg.cc/XNQgDnM8/img3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="bg"></div>
+            <div class="info-box">
+                <div class="info-slider">
+                    <div class="info-item" style="--i:3;">
+                        <h2>Sunblast</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, laborum deleniti. Distinctio nostrum quis, id excepturi officia nisi? Debitis quo voluptas officia nobis eius dolorum vel soluta ea veritatis molestiae.</p>
+                        <a href="#" class="btn">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-box">
+                <div class="img-slider">
+                    <div class="img-item" style="--i:3;">
+                        <img src="https://i.postimg.cc/50p8GSr0/img4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="bg"></div>
+            <div class="info-box">
+                <div class="info-slider">
+                    <div class="info-item" style="--i:4;">
+                        <h2>Breakclash</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, laborum deleniti. Distinctio nostrum quis, id excepturi officia nisi? Debitis quo voluptas officia nobis eius dolorum vel soluta ea veritatis molestiae.</p>
+                        <a href="#" class="btn">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="img-box">
+                <div class="img-slider">
+                    <div class="img-item" style="--i:4;">
+                        <img src="https://i.postimg.cc/0jBD52P1/img5.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li class="selected"><img src="https://i.postimg.cc/02yw6SBG/thumb1.png" alt=""></li>
+            <li><img src="https://i.postimg.cc/ncSQqLyy/thumb2.png" alt=""></li>
+            <li><img src="https://i.postimg.cc/W1Dq8vjh/thumb3.png" alt=""></li>
+            <li><img src="https://i.postimg.cc/s27QF4Mz/thumb4.png" alt=""></li>
+            <li><img src="https://i.postimg.cc/C10Zwn8q/thumb5.png" alt=""></li>
+        </ul>
+    </div>
+
+    
+
+    <script>
+        const thumbs = document.querySelectorAll('.thumb li');
+const infoSlider = document.querySelectorAll('.info-slider');
+const imgSlider = document.querySelectorAll('.img-slider');
+const items = document.querySelectorAll('.item');
+
+let index = 0;
+
+thumbs.forEach((thumb, ind) => {
+    thumb.addEventListener('click', () => {
+
+        document.querySelector('.thumb .selected').classList.remove('selected');
+        thumb.classList.add('selected');
+
+        index = ind;
+
+        infoSlider.forEach(slide => {
+            slide.style.transform = `translateY(${index * -100}%)`;
+        });
+        imgSlider.forEach(slide =>{
+            slide.style.transform = `translateX(${index * -100}%)`;
+        })
+
+        document.querySelector('.item.active').classList.remove('active');
+        items[index].classList.add('active');
+
+    });
+});
+    </script>
+</body>
+</html>

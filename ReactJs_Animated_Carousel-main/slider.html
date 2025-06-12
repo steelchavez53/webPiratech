@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+        <div class="slider">
+          <div class="item">
+            <img src="https://unsplash.it/1920/1080?random=1" loading="eager" alt="">
+            <div class='content'>
+              <h2 class='title'>"Lossless Youths"</h2>
+              <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                praesentium nisi. Id laboriosam ipsam enim. </p>
+              <button>Read More</button>
+            </div>
+          </div>
+          <!-- visibele item -->
+          <div class="item">
+            <img src="https://unsplash.it/1920/1080?random=2" loading="eager" alt="Nobis Omnis" class="image" />
+            <div class='content'>
+              <h2 class='title'>"Estrange Bond"</h2>
+              <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                praesentium nisi. Id laboriosam ipsam enim. </p>
+              <button>Read More</button>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://unsplash.it/1920/1080?random=3" loading="eager" alt="Ut Distinctio" class="image" />
+            <div class='content'>
+              <h2 class='title'>"The Gate Keeper"</h2>
+              <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                praesentium nisi. Id laboriosam ipsam enim. </p>
+              <button>Read More</button>
+            </div>
+          </div>
+          <div class='item'>
+            <img src="https://unsplash.it/1920/1080?random=4" loading="eager" alt="Commodi Veniam" class="image" />
+            <div class='content'>
+              <h2 class='title'>"Last Trace Of Us"</h2>
+              <p class='description'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+              </p>
+              <button>Read More</button>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://unsplash.it/1920/1080?random=5" loading="eager" alt="Ipsam Tenetur" class="image" />
+            <div class='content'>
+              <h2 class='title'>"Urban Decay"</h2>
+              <p class='description'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.
+              </p>
+              <button>Read More</button>
+            </div>
+          </div>
+          <div class="item">
+            <img src="https://unsplash.it/1920/1080?random=6" loading="eager" alt="Nesciunt Consectetur Similique Sit" class="image" />
+            <div class='content'>
+              <h2 class='title'>"The Migration"</h2>
+              <p class='description'> Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Tempore fuga voluptatum, iure corporis inventore
+                praesentium nisi. Id laboriosam ipsam enim. </p>
+              <button>Read More</button>
+            </div>
+          </div>
+        </div>
+        <nav class='nav'>
+          <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+          <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+        </nav>
+      </main>
+      <script>// inspired by -> https://codepen.io/noirsociety/pen/ZEwLGXB
+
+        // modified animation to keep it centered on the viewport
+        // modified animation timing
+        // no background images
+        // added stagger
+        
+        // simple js i ever seen :)
+        
+        const slider = document.querySelector(".slider");
+        
+        function activate(e) {
+          const items = document.querySelectorAll(".item");
+          e.target.matches(".next") && slider.append(items[0]);
+          e.target.matches(".prev") && slider.prepend(items[items.length - 1]);
+        }
+        
+        document.addEventListener("click", activate, false);
+        </script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

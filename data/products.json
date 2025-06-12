@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "Producto 1",
+        "description": "Descripción del Producto 1",
+        "price": 100.00,
+        "images": [
+            "img/product/product-1.jpg",
+            "img/product/product-2.jpg",
+            "img/product/product-3.jpg"
+        ],
+        "sizes": ["151", "148", "156", "145", "162(w)", "163"],
+        "colors": ["color1", "color2", "color3", "color4", "color5", "color6"],
+        "quantity": 95,
+        "features": [
+            {
+                "title": "Uso Doméstico",
+                "icon": "fa-desktop",
+                "details": [
+                    "Navegación web",
+                    "Procesamiento de documentos",
+                    "Reproducción de multimedia",
+                    "Diseño gráfico profesional",
+                    "Juegos de alta gama"
+                ]
+            },
+            {
+                "title": "Uso Profesional",
+                "icon": "fa-desktop",
+                "details": [
+                    "Edición de video",
+                    "Diseño gráfico profesional",
+                    "Programación y desarrollo de software",
+                    "Juegos de alta gama",
+                    "Navegación web básica"
+                ]
+            },
+            {
+                "title": "Uso Escolar",
+                "icon": "fa-desktop",
+                "details": [
+                    "Realización de tareas",
+                    "Investigación en línea",
+                    "Uso de aplicaciones educativas",
+                    "Juegos  educativos ",
+                    "Edición de video avanzada no"
+                ]
+            }
+        ]
+    }
+]

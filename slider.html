@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+    <style>
+        .swiper-container {
+  width: 100%;
+  height: 500px; /* Ajusta la altura según tus necesidades */
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.swiper-pagination-bullet {
+  background: white;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: white;
+}
+
+    </style>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/hero/Asesoria.jpg" alt="Slide 1">
+            <div class="slide-caption">
+              <h2>Tu título aquí</h2>
+              <p>Descripción del slide 1</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hero/Asesoria.jpg" alt="Slide 2">
+            <div class="slide-caption">
+              <h2>Tu título aquí</h2>
+              <p>Descripción del slide 2</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="img/hero/Asesoria.jpg" alt="Slide 3">
+            <div class="slide-caption">
+              <h2>Tu título aquí</h2>
+              <p>Descripción del slide 3</p>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Paginación y navegación -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true, // Slider en bucle
+    autoplay: {
+      delay: 5000, // Tiempo de auto deslizamiento
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    effect: 'fade', // Efecto de transición
+    fadeEffect: {
+      crossFade: true
+    }
+  });
+</script>
+
+</html>
